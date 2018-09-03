@@ -1,0 +1,17 @@
+# IntelliJ IDEA
+.idea
+*.iml
+
+# Gradle
+.gradle
+gradlew.bat
+build
+local.properties
+reports
+
+# Mac OS
+.DS_Store
+
+# Output directories
+app/camera
+app/hub

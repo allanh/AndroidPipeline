@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingTop="5dp"
+android:clickable="true"
+android:focusableInTouchMode="true">
+
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPersonName"
+    android:text="Topic"
+    android:ems="10"
+    android:id="@+id/mqttTopicText"
+    android:layout_below="@+id/tv_mqtt"
+    android:elevation="24dp"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPersonName"
+    android:text="Message"
+    android:ems="10"
+    android:id="@+id/mqttMessageText"
+    android:layout_below="@+id/mqttTopicText"
+    android:layout_alignParentStart="true"
+    android:visibility="gone"/>
+
+<TextView
+    android:text="Event"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/mqttMessageText"
+    android:layout_alignStart="@+id/mqttTopicText"
+    android:id="@+id/tw_event"
+    android:textSize="18sp"/>
+
+<Spinner
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/mqttMessageText"
+    android:layout_toEndOf="@+id/tv_mqtt"
+    android:layout_marginStart="15dp"
+    android:id="@+id/eventSpinner"/>
+
+    <Button
+        android:id="@+id/unsubscribeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/disconnectMqttButton"
+        android:layout_alignTop="@+id/subscribeButton"
+        android:text="@string/unsubscribe_topic" />
+
+    <Button
+    android:text="@string/subscribe_topic"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/subscribeButton"
+    android:layout_below="@+id/connectMqttButton"
+    android:layout_alignStart="@+id/connectMqttButton"
+    android:layout_marginTop="11dp"/>
+
+<Button
+    android:text="@string/publish_message"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/publishMessageButton"
+    android:layout_alignBaseline="@+id/subscribeButton"
+    android:layout_alignBottom="@+id/subscribeButton"
+    android:layout_centerHorizontal="true"/>
+
+<Button
+    android:text="@string/connect_mqtt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/connectMqttButton"
+    android:layout_marginStart="24dp"
+    android:layout_below="@+id/eventSpinner"
+    android:layout_toEndOf="@+id/mqttMessageText"
+    android:layout_marginTop="14dp"/>
+
+    <Button
+        android:id="@+id/disconnectMqttButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/connectMqttButton"
+        android:layout_marginEnd="11dp"
+        android:text="@string/disconnect_mqtt" />
+
+    <TextView
+    android:text="MQTT"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tv_mqtt"
+    android:textSize="18sp"
+    android:layout_marginTop="34dp"
+    android:layout_toEndOf="@+id/mqttMessageText"/>
+
+    <Button
+        android:id="@+id/httpBinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/subscribeButton"
+        android:layout_marginBottom="200dp"
+        android:text="@string/http_bin_test" />
+
+</RelativeLayout>
