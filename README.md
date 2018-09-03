@@ -42,3 +42,6 @@ public void runProcess() throws Exception {
     verify(httpItem).setOkHttpRequestBody(any(RequestBody.class));
 }
 ```
+
+## Class Diagram
+![](https://i.imgur.com/4gmtvYH.png)
