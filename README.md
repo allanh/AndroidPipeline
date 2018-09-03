@@ -1,6 +1,9 @@
 # Pipeline
 Pipeline implementation with unit test cases
 
+## Class Diagram
+![](https://i.imgur.com/4gmtvYH.png)
+
 ## Usage
 Get origin IP from HttpBin server.
 
@@ -42,6 +45,3 @@ public void runProcess() throws Exception {
     verify(httpItem).setOkHttpRequestBody(any(RequestBody.class));
 }
 ```
-
-## Class Diagram
-![](https://i.imgur.com/4gmtvYH.png)
